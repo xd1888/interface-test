@@ -4,4 +4,12 @@ mytest = common.Common()
 rest = mytest.get("/")
 print(rest.text)
 
-rest = mytest.post()
+
+"""myPost"""
+uri = '/login'
+username = 'criss'
+password = 'criss'
+mytest = common.Common()
+payload = "username=" + username + "&password=" + password
+content = mytest.post(uri,parameter=payload)
+print(content.text)

@@ -10,7 +10,7 @@ class Common:
         return response_index
     
     def post(self,uri,parameter=""):
-        Myurl = self.url_root+uri+parameter
+        Myurl = self.url_root+uri
         if len(parameter) > 0:
             res = requests.post(Myurl,data=parameter)
         else:
